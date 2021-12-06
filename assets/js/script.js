@@ -13,6 +13,109 @@ function displayResults () {
 
 startQuiz();
 
+var testQuestions = [
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    },
+    {
+        question: "",
+        choices: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        },
+        answer: ""
+    }
+];
+
 startButton.addEventListener('click', quizStart);
 
 submitButton.addEventListener('click', displayResults);
