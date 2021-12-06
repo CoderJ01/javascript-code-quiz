@@ -15,104 +15,105 @@ startQuiz();
 
 var testQuestions = [
     {
-        question: "",
+        question: "What are variables used for in JavaScript Programs?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "Storing numbers, dates, or other values",
+            b: "Causing high-school algebra flashbacks",
+            c: " Varying randomly",
+            d: "None of the above"
         },
-        answer: ""
+        answer: "a"
     },
     {
-        question: "",
+        question: "What should appear at the very end of your JavaScript?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "The END statement",
+            b: "The </meta>",
+            c: "The </script>",
+            d: "None of the above"
         },
-        answer: ""
+        answer: "c"
     },
     {
-        question: "",
+        question: "What are Javascript functions capable of performing?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "return values",
+            b: "accept parameters",
+            c: "Both",
+            d: "Neither"
         },
-        answer: ""
+        answer: "b"
     },
     {
-        question: "",
+        question: "Which of the following is NOT a vaild JavaScript variable name?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "pi",
+            b: "produceArray",
+            c: "generate_string",
+            d: "5listof2dogs"
         },
-        answer: ""
+        answer: "d"
     },
     {
-        question: "",
+        question: "Which tag is an HTML extension that can enclose any number of JavaScript statemnts?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "<header>",
+            b: "<script>",
+            c: "<footer>",
+            d: "<title>"
         },
-        answer: ""
+        answer: "b"
     },
     {
-        question: "",
+        question: "What is the correct syntax to write 'My Pet Dog' in JavaScript?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "response.write(My Pet Dog)",
+            b: "printIn(My Pet Dog)",
+            c: "System.out.printIn(My Pet Dog)",
+            d: "document.write(My Pet Dog)"
+            //come back to this and put quotation marks
         },
-        answer: ""
+        answer: "d"
     },
     {
-        question: "",
+        question: "In the HTML, where is the JavaScript correctly placed?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "<head>",
+            b: "<javascript>",
+            c: "<script>",
+            d: "<js>"
         },
-        answer: ""
+        answer: "c"
     },
     {
-        question: "",
+        question: "The correct syntax for linking a .html to a .js file contains ___________?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "src",
+            b: "href",
+            c: "rel",
+            d: "id"
         },
-        answer: ""
+        answer: "a"
     },
     {
-        question: "",
+        question: "Which is the server-side JavaScript object?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "FileUpLoad",
+            b: "function",
+            c: "date",
+            d: "file"
         },
-        answer: ""
+        answer: "d"
     },
     {
-        question: "",
+        question: "How are specific conditions tested for in JavaScript? Which statement is utilized?",
         choices: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "If",
+            b: "For",
+            c: "Select",
+            d: "Switch"
         },
-        answer: ""
+        answer: "a"
     }
 ];
 
