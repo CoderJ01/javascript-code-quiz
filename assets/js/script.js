@@ -41,7 +41,7 @@ function quizStart () {
 function displayResults () {
 
     // gather answer containers from our quiz
-    const containsAnswer = containQuiz.querySelectorAll('.choices');
+    const containsAnswers = containQuiz.querySelectorAll('.choices');
 
     // keep track of user's answers
     let correctNum = 0;
@@ -52,7 +52,7 @@ function displayResults () {
         (currentQuestion, questionNumber) => {
 
             // if find selected answer
-            const containsAnswer = containsAnswer[questionNumber];
+            const containsAnswer = containsAnswers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
             const userSelection = (containsAnswer.querySelector(selector) || {}).value;
 
@@ -61,11 +61,11 @@ function displayResults () {
 
                 correctNum++;
 
-                containsAnswer[questionNumber].style.color = 'green';
+                containsAnswers[questionNumber].style.color = 'green';
 
             }
             else {
-                containsAnswer[questionNumber].style.color = 'red';
+                containsAnswers[questionNumber].style.color = 'red';
             }
         }
     );
@@ -92,8 +92,8 @@ const testQuestions = [
         question: "What should appear at the very end of your JavaScript?",
         choices: {
             a: "The END statement",
-            b: "The </meta>",
-            c: "The </script>",
+            b: "The closing meta tag",
+            c: "The closing script tag",
             d: "None of the above"
         },
         answer: "c"
@@ -121,10 +121,10 @@ const testQuestions = [
     {
         question: "Which tag is an HTML extension that can enclose any number of JavaScript statemnts?",
         choices: {
-            a: "<header>",
-            b: "<script>",
-            c: "<footer>",
-            d: "<title>"
+            a: "header",
+            b: "script",
+            c: "footer",
+            d: "title"
         },
         answer: "b"
     },
@@ -142,10 +142,10 @@ const testQuestions = [
     {
         question: "In the HTML, where is the JavaScript correctly placed?",
         choices: {
-            a: "<head>",
-            b: "<javascript>",
-            c: "<script>",
-            d: "<js>"
+            a: "head tag",
+            b: "javascript tag",
+            c: "script tag",
+            d: "js tag"
         },
         answer: "c"
     },
