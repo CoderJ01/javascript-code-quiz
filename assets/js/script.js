@@ -1,46 +1,50 @@
+(function(){
+
 function quizStart () {
 
-    var outputHTML = [];
+    // store HTML output
+    const outputHTML = [];
 
+    // for each question
     testQuestions.forEach (
         (currentQuestion, questionNumber) => {
 
-            var choices = [];
+            // variable to store the list of possible answers
+            const choices = [];
 
-            for(letter in currentQuestion.choices) {
-
+            // and for each availible answer...
+            for(letter in currentQuestion.choices) { // letter in currentQuestion.choices
+                
+                //... add HTML radio button
                 choices.push (
-                    <label>
-                        <input type="radio" name="questions${questionNumber}" value="${letter}"></input>
+                    `<label>
+                        <input type="radio" name="question${questionNumber}" value="${letter}"></input>
                         ${letter} :
                         ${currentQuestion.choices[letter]}
-                    </label>
+                    </label>`
                 );
             }
 
+            // add this question and its answers to the output
             outputHTML.push(
-                <><div class="question">${currentQuestion.question}</div><div class="choices">${answers.join('')}</div></>
+                `<div class="question">${currentQuestion.question}</div>
+                <div class="choices">${choices.join('')}</div>`
             );
         }
     );
-
-    containQuiz.innerHTML = output.join('');
+    
+    // combine output list into one string of HTML and put in on the page
+    containQuiz.innerHTML = outputHTML.join('');
 
 }
-
-testQuestions.forEach (
-    (currentQuestion, questionNumber) => {
-        //code to run for each question
-    }
-);
 
 function displayResults () {
 
     // gather answer containers from our quiz
-    var containsAnswers = containQuiz.querySelectorAll('.answers');
+    const containsAnswer = containQuiz.querySelectorAll('.choices');
 
     // keep track of user's answers
-    var correctNum = 0;
+    let correctNum = 0;
 
     // for each question...
     testQuestions.forEach (
@@ -48,12 +52,12 @@ function displayResults () {
         (currentQuestion, questionNumber) => {
 
             // if find selected answer
-            var containsAnswer = containsAnswer[questionNumber];
-            var selector = `input[name=question${questionNumber}]:checked`;
-            var userSelection = (containsAnswer.querySelector(selector) || {}).value;
+            const containsAnswer = containsAnswer[questionNumber];
+            const selector = `input[name=question${questionNumber}]:checked`;
+            const userSelection = (containsAnswer.querySelector(selector) || {}).value;
 
             // if answer is correct
-            if(userSelection === currentQuestion.correctAnswer) {
+            if(userSelection === currentQuestion.answer) {
 
                 correctNum++;
 
@@ -63,30 +67,23 @@ function displayResults () {
             else {
                 containsAnswer[questionNumber].style.color = 'red';
             }
-
-
-
-            
         }
-
     );
 
-    containsResults.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-
+    containResults.innerHTML = `${correctNum} out of ${testQuestions.length}`;
 }
 
-
-var startButton = document.getElementById('start');
-var containQuiz = document.getElementById('quiz');
-var containResults = document.getElementById('results');
-var submitButton = document.getElementById('submit');
-var testQuestions = [
+// var startButton = document.getElementById('start');
+const containQuiz = document.getElementById('quiz');
+const containResults = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+const testQuestions = [
     {
         question: "What are variables used for in JavaScript Programs?",
         choices: {
             a: "Storing numbers, dates, or other values",
             b: "Causing high-school algebra flashbacks",
-            c: " Varying randomly",
+            c: "Varying randomly",
             d: "None of the above"
         },
         answer: "a"
@@ -184,9 +181,10 @@ var testQuestions = [
     }
 ];
 
+quizStart();
 
-startQuiz();
-
-startButton.addEventListener('click', quizStart);
+//startButton.addEventListener('click', quizStart);
 
 submitButton.addEventListener('click', displayResults);
+})();
+
