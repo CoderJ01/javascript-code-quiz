@@ -131,10 +131,10 @@ const testQuestions = [
     {
         question: "What is the correct syntax to write 'My Pet Dog' in JavaScript?",
         choices: {
-            a: "response.write(My Pet Dog)",
-            b: "printIn(My Pet Dog)",
-            c: "System.out.printIn(My Pet Dog)",
-            d: "document.write(My Pet Dog)"
+            a: "response.write(\"My Pet Dog\")",
+            b: "printIn(\"My Pet Dog\")",
+            c: "System.out.printIn(\"My Pet Dog\")",
+            d: "document.write(\"My Pet Dog\")"
             //come back to this and put quotation marks
         },
         answer: "d"
@@ -142,10 +142,10 @@ const testQuestions = [
     {
         question: "In the HTML, where is the JavaScript correctly placed?",
         choices: {
-            a: "head tag",
-            b: "javascript tag",
-            c: "script tag",
-            d: "js tag"
+            a: "head",
+            b: "javascript",
+            c: "script",
+            d: "js"
         },
         answer: "c"
     },
