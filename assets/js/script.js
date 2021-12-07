@@ -1,18 +1,85 @@
+function quizStart () {
+
+    var outputHTML = [];
+
+    testQuestions.forEach (
+        (currentQuestion, questionNumber) => {
+
+            var choices = [];
+
+            for(letter in currentQuestion.choices) {
+
+                choices.push (
+                    <label>
+                        <input type="radio" name="questions${questionNumber}" value="${letter}"></input>
+                        ${letter} :
+                        ${currentQuestion.choices[letter]}
+                    </label>
+                );
+            }
+
+            outputHTML.push(
+                <><div class="question">${currentQuestion.question}</div><div class="choices">${answers.join('')}</div></>
+            );
+        }
+    );
+
+    containQuiz.innerHTML = output.join('');
+
+}
+
+testQuestions.forEach (
+    (currentQuestion, questionNumber) => {
+        //code to run for each question
+    }
+);
+
+function displayResults () {
+
+    // gather answer containers from our quiz
+    var containsAnswers = containQuiz.querySelectorAll('.answers');
+
+    // keep track of user's answers
+    var correctNum = 0;
+
+    // for each question...
+    testQuestions.forEach (
+
+        (currentQuestion, questionNumber) => {
+
+            // if find selected answer
+            var containsAnswer = containsAnswer[questionNumber];
+            var selector = `input[name=question${questionNumber}]:checked`;
+            var userSelection = (containsAnswer.querySelector(selector) || {}).value;
+
+            // if answer is correct
+            if(userSelection === currentQuestion.correctAnswer) {
+
+                correctNum++;
+
+                containsAnswer[questionNumber].style.color = 'green';
+
+            }
+            else {
+                containsAnswer[questionNumber].style.color = 'red';
+            }
+
+
+
+            
+        }
+
+    );
+
+    containsResults.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
+}
+
+
 var startButton = document.getElementById('start');
 var containQuiz = document.getElementById('quiz');
 var containResults = document.getElementById('results');
 var submitButton = document.getElementById('submit');
-
-function quizStart () {
-
-}
-
-function displayResults () {
-
-}
-
-startQuiz();
-
 var testQuestions = [
     {
         question: "What are variables used for in JavaScript Programs?",
@@ -116,6 +183,9 @@ var testQuestions = [
         answer: "a"
     }
 ];
+
+
+startQuiz();
 
 startButton.addEventListener('click', quizStart);
 
