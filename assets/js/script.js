@@ -27,8 +27,10 @@ function quizStart () {
 
             // add this question and its answers to the output
             outputHTML.push(
-                `<div class="question">${currentQuestion.question}</div>
-                <div class="choices">${choices.join('')}</div>`
+                `<div class="slide">
+                <div class="question">${currentQuestion.question}</div>
+                <div class="choices">${choices.join("")}</div>
+                </div>`
             );
         }
     );
@@ -182,6 +184,14 @@ const testQuestions = [
 ];
 
 quizStart();
+
+// Pagination
+const previousButton = document.getElementById("previous");
+const nextButton = document.getElementById("next");
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+showslide(currentslide);
 
 //startButton.addEventListener('click', quizStart);
 
