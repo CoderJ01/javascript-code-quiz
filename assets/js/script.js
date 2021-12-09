@@ -76,6 +76,35 @@ function displayResults () {
     containResults.innerHTML = `${correctNum} out of ${testQuestions.length}`;
 }
 
+//const countdown = document.getElementById('timer-display').innerHTML='00:'+sec;
+
+// document.getElementById("start").addEventListener("click", function () {
+//     document.getElementById("quiz").innerHTML= begin.join(" ");
+// });
+
+
+function timer () {
+    const sec = 59;
+    const timer = setInterval(function() {
+      
+        if(sec > 1) {
+            countdown.textContent = sec;
+            sec--;
+        }
+        else if (sec === 1) {
+            countdown.textContent = sec;
+            sec--;
+        }
+        else {
+            countdown.textContent = '';
+            clearInterval(timer);
+        }
+    }, 1000);
+    console.log("sec: " + sec);
+}
+
+timer();
+
 function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
@@ -213,13 +242,13 @@ const testQuestions = [
     }
 ];
 
-// document.getElementById("start").onclick = quizStart();
+document.getElementById("start").onclick = quizStart();
 
-var begin = document.getElementById("start");
-if (begin.addEventListener)
-    begin.addEventListener("click", quizStart, false);
-else if (begin.attachEvent)
-    begin.attachEvent('onclick', quizStart);
+// var begin = document.getElementById("start");
+// if (begin.addEventListener)
+//     begin.addEventListener("click", quizStart, false);
+// else if (begin.attachEvent)
+//     begin.attachEvent('onclick', quizStart);
 
 // Pagination
 // document.getElementById("start").addEventListener("click", function () {
