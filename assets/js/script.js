@@ -1,22 +1,19 @@
-(function(){
-
-function quizStart () {
+function quizStart() {
 
     // store HTML output
     const outputHTML = [];
 
     // for each question
-    testQuestions.forEach (
+    testQuestions.forEach(
         (currentQuestion, questionNumber) => {
 
             // variable to store the list of possible answers
             const choices = [];
 
             // and for each availible answer...
-            for(letter in currentQuestion.choices) { // letter in currentQuestion.choices
-                
+            for (letter in currentQuestion.choices) { // letter in currentQuestion.choices
                 //... add HTML radio button
-                choices.push (
+                choices.push(
                     `<label>
                         <input type="radio" name="question${questionNumber}" value="${letter}"></input>
                         ${letter} :
@@ -34,11 +31,15 @@ function quizStart () {
             );
         }
     );
-    
-    // combine output list into one string of HTML and put in on the page
-    containQuiz.innerHTML = outputHTML.join('');
 
-}
+    // combine output list into one string of HTML and put in on the page
+
+    containQuiz.innerHTML = outputHTML.join('');
+   
+//     document.getElementById("start").addEventListener('click', function () {
+//         containQuiz.innerHTML = outputHTML.join('');
+// }); 
+ }
 
 function displayResults () {
 
@@ -75,7 +76,36 @@ function displayResults () {
     containResults.innerHTML = `${correctNum} out of ${testQuestions.length}`;
 }
 
-// var startButton = document.getElementById('start');
+function showSlide(n) {
+    slides[currentSlide].classList.remove('active-slide');
+    slides[n].classList.add('active-slide');
+    currentSlide = n;
+
+    if(currentSlide === 0) {
+        previousButton.style.display = 'none';
+    }
+    else {
+        previousButton.style.display = 'inline-block';
+    }
+
+    if(currentSlide === slides.length - 1) {
+        nextButton.style.display = 'none';
+        submitButton.style.display = 'inline-block';
+    }
+    else {
+        nextButton.style.display = 'inline-block';
+        submitButton.style.display = 'none';
+    }
+}
+
+function showNextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function showPreviousSlide () {
+    showSlide(currentSlide - 1);
+}
+
 const containQuiz = document.getElementById('quiz');
 const containResults = document.getElementById('results');
 const submitButton = document.getElementById('submit');
@@ -183,18 +213,33 @@ const testQuestions = [
     }
 ];
 
-quizStart();
+// document.getElementById("start").onclick = quizStart();
+
+var begin = document.getElementById("start");
+if (begin.addEventListener)
+    begin.addEventListener("click", quizStart, false);
+else if (begin.attachEvent)
+    begin.attachEvent('onclick', quizStart);
 
 // Pagination
+// document.getElementById("start").addEventListener("click", function () {
+//     document.getElementById("quiz").innerHTML= begin.join(" ");
+// });
+
+// const startButton = document.getElementById('start');
 const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
-showslide(currentslide);
+showSlide(currentSlide);
 
 //startButton.addEventListener('click', quizStart);
 
 submitButton.addEventListener('click', displayResults);
-})();
+
+previousButton.addEventListener("click", showPreviousSlide);
+
+nextButton.addEventListener("click", showNextSlide);
+
 
