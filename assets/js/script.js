@@ -89,7 +89,7 @@ function displayResults () {
  
 function timer () {
     var sec = 59;
-    var countdown = document.getElementById('timer-display').innerHTML='00:'+sec;
+    var countdown = document.getElementById('timer-display');
     
     var timer = setInterval(function() {
       
@@ -265,12 +265,14 @@ var testQuestions = [
 // else if (begin.attachEvent)
 //     begin.attachEvent('onclick', quizStart);
 
-//quizStart();
+quizStart();
 
 // Pagination
-document.getElementById("start").addEventListener("click", function () {
-    document.getElementById("quiz").innerHTML= beginQuiz.join(" ");
-});
+
+// Method F
+// document.getElementById("start").addEventListener("click", function () {
+//     document.getElementById("quiz").innerHTML= beginQuiz.join(" ");
+// });
 
 // var startButton = document.getElementById('start');
 var previousButton = document.getElementById("previous");
@@ -280,7 +282,7 @@ var currentSlide = 0;
 
 showSlide(currentSlide);
 
-// Method F
+// Method G
 //startButton.addEventListener('click', quizStart);
 
 submitButton.addEventListener('click', displayResults);
