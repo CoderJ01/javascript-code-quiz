@@ -1,53 +1,58 @@
+// var beginQuiz = quizStart(function(){
+
+// });
+
 function quizStart() {
+            // store HTML output
+            var outputHTML = [];
 
-    // store HTML output
-    const outputHTML = [];
-
-    // for each question
-    testQuestions.forEach(
-        (currentQuestion, questionNumber) => {
-
-            // variable to store the list of possible answers
-            const choices = [];
-
-            // and for each availible answer...
-            for (letter in currentQuestion.choices) { // letter in currentQuestion.choices
-                //... add HTML radio button
-                choices.push(
-                    `<label>
-                        <input type="radio" name="question${questionNumber}" value="${letter}"></input>
-                        ${letter} :
-                        ${currentQuestion.choices[letter]}
-                    </label>`
-                );
-            }
-
-            // add this question and its answers to the output
-            outputHTML.push(
-                `<div class="slide">
-                <div class="question">${currentQuestion.question}</div>
-                <div class="choices">${choices.join("")}</div>
-                </div>`
+            // for each question
+            testQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+        
+                    // variable to store the list of possible answers
+                    var choices = [];
+        
+                    // and for each availible answer...
+                    for (letter in currentQuestion.choices) { // letter in currentQuestion.choices
+                        //... add HTML radio button
+                        choices.push(
+                            `<label>
+                                <input type="radio" name="question${questionNumber}" value="${letter}"></input>
+                                ${letter} :
+                                ${currentQuestion.choices[letter]}
+                            </label>`
+                        );
+                    }
+        
+                    // add this question and its answers to the output
+                    outputHTML.push(
+                        `<div class="slide">
+                        <div class="question">${currentQuestion.question}</div>
+                        <div class="choices">${choices.join("")}</div>
+                        </div>`
+                    );
+                }
             );
-        }
-    );
-
-    // combine output list into one string of HTML and put in on the page
-
-    containQuiz.innerHTML = outputHTML.join('');
-   
-//     document.getElementById("start").addEventListener('click', function () {
-//         containQuiz.innerHTML = outputHTML.join('');
-// }); 
- }
+        
+            // combine output list into one string of HTML and put in on the page
+        
+            containQuiz.innerHTML = outputHTML.join('');
+                
+        // Method A
+        //     document.getElementById("start").addEventListener('click', function () {
+        //         containQuiz.innerHTML = outputHTML.join('');
+        // }); 
+    
+    }
 
 function displayResults () {
 
     // gather answer containers from our quiz
-    const containsAnswers = containQuiz.querySelectorAll('.choices');
+    var containsAnswers = containQuiz.querySelectorAll('.choices');
 
     // keep track of user's answers
-    let correctNum = 0;
+    var correctNum = 0;
 
     // for each question...
     testQuestions.forEach (
@@ -55,9 +60,9 @@ function displayResults () {
         (currentQuestion, questionNumber) => {
 
             // if find selected answer
-            const containsAnswer = containsAnswers[questionNumber];
-            const selector = `input[name=question${questionNumber}]:checked`;
-            const userSelection = (containsAnswer.querySelector(selector) || {}).value;
+            var containsAnswer = containsAnswers[questionNumber];
+            var selector = `input[name=question${questionNumber}]:checked`;
+            var userSelection = (containsAnswer.querySelector(selector) || {}).value;
 
             // if answer is correct
             if(userSelection === currentQuestion.answer) {
@@ -76,16 +81,17 @@ function displayResults () {
     containResults.innerHTML = `${correctNum} out of ${testQuestions.length}`;
 }
 
-//const countdown = document.getElementById('timer-display').innerHTML='00:'+sec;
+// Method B
+//  document.getElementById("start").addEventListener("click", function () {
+//      document.getElementById("quiz").innerHTML= begin.join(" ");
+//  });
 
-// document.getElementById("start").addEventListener("click", function () {
-//     document.getElementById("quiz").innerHTML= begin.join(" ");
-// });
-
-
+ 
 function timer () {
-    const sec = 59;
-    const timer = setInterval(function() {
+    var sec = 59;
+    var countdown = document.getElementById('timer-display').innerHTML='00:'+sec;
+    
+    var timer = setInterval(function() {
       
         if(sec > 1) {
             countdown.textContent = sec;
@@ -102,6 +108,8 @@ function timer () {
     }, 1000);
     console.log("sec: " + sec);
 }
+
+
 
 timer();
 
@@ -127,6 +135,9 @@ function showSlide(n) {
     }
 }
 
+// Method C
+// startButton.addEventListener('click', showSlide);
+
 function showNextSlide() {
     showSlide(currentSlide + 1);
 }
@@ -135,10 +146,11 @@ function showPreviousSlide () {
     showSlide(currentSlide - 1);
 }
 
-const containQuiz = document.getElementById('quiz');
-const containResults = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-const testQuestions = [
+var beginQuiz = document.getElementById('start');
+var containQuiz = document.getElementById('quiz');
+var containResults = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+var testQuestions = [
     {
         question: "What are variables used for in JavaScript Programs?",
         choices: {
@@ -242,27 +254,33 @@ const testQuestions = [
     }
 ];
 
-document.getElementById("start").onclick = quizStart();
+  
+// Method D
+// document.getElementById("start").onclick = quizStart();
 
+// Method E
 // var begin = document.getElementById("start");
 // if (begin.addEventListener)
 //     begin.addEventListener("click", quizStart, false);
 // else if (begin.attachEvent)
 //     begin.attachEvent('onclick', quizStart);
 
-// Pagination
-// document.getElementById("start").addEventListener("click", function () {
-//     document.getElementById("quiz").innerHTML= begin.join(" ");
-// });
+//quizStart();
 
-// const startButton = document.getElementById('start');
-const previousButton = document.getElementById("previous");
-const nextButton = document.getElementById("next");
-const slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
+// Pagination
+document.getElementById("start").addEventListener("click", function () {
+    document.getElementById("quiz").innerHTML= beginQuiz.join(" ");
+});
+
+// var startButton = document.getElementById('start');
+var previousButton = document.getElementById("previous");
+var nextButton = document.getElementById("next");
+var slides = document.querySelectorAll(".slide");
+var currentSlide = 0;
 
 showSlide(currentSlide);
 
+// Method F
 //startButton.addEventListener('click', quizStart);
 
 submitButton.addEventListener('click', displayResults);
