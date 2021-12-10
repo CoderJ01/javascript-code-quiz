@@ -1,50 +1,45 @@
-// var beginQuiz = quizStart(function(){
-
-// });
-
 function quizStart() {
-            // store HTML output
-            var outputHTML = [];
 
-            // for each question
+        // store HTML output      
+        var outputHTML = [];
+
+            
+            // for each question       
             testQuestions.forEach(
+                
                 (currentQuestion, questionNumber) => {
         
-                    // variable to store the list of possible answers
-                    var choices = [];
+                    
+                // variable to store the list of possible answers
+                    
+                 var choices = [];
         
-                    // and for each availible answer...
-                    for (letter in currentQuestion.choices) { // letter in currentQuestion.choices
-                        //... add HTML radio button
-                        choices.push(
-                            `<label>
-                                <input type="radio" name="question${questionNumber}" value="${letter}"></input>
-                                ${letter} :
-                                ${currentQuestion.choices[letter]}
-                            </label>`
-                        );
-                    }
-        
-                    // add this question and its answers to the output
-                    outputHTML.push(
-                        `<div class="slide">
-                        <div class="question">${currentQuestion.question}</div>
-                        <div class="choices">${choices.join("")}</div>
-                        </div>`
+                // and for each availible answer...
+                for (letter in currentQuestion.choices) { // letter in currentQuestion.choices
+                     //... add HTML radio button
+                     choices.push(
+                    `<label>
+                        <input type="radio" name="question${questionNumber}" value="${letter}"></input>
+                        ${letter} :
+                        ${currentQuestion.choices[letter]}
+                    </label>`
                     );
+                }
+        
+                // add this question and its answers to the output
+                outputHTML.push(
+                    `<div class="slide">
+                    <div class="question">${currentQuestion.question}</div>
+                    <div class="choices">${choices.join("")}</div>
+                    </div>`
+                );
                 }
             );
         
-            // combine output list into one string of HTML and put in on the page
+    // combine output list into one string of HTML and put in on the page
         
-            containQuiz.innerHTML = outputHTML.join('');
-                
-        // Method A
-        //     document.getElementById("start").addEventListener('click', function () {
-        //         containQuiz.innerHTML = outputHTML.join('');
-        // }); 
-    
-    }
+    containQuiz.innerHTML = outputHTML.join('');                
+}
 
 function displayResults () {
 
@@ -81,14 +76,10 @@ function displayResults () {
     containResults.innerHTML = `${correctNum} out of ${testQuestions.length}`;
 }
 
-// Method B
-//  document.getElementById("start").addEventListener("click", function () {
-//      document.getElementById("quiz").innerHTML= begin.join(" ");
-//  });
+var sec = 59;
 
- 
 function timer () {
-    var sec = 59;
+  
     var countdown = document.getElementById('timer-display');
     
     var timer = setInterval(function() {
@@ -109,11 +100,10 @@ function timer () {
     console.log("sec: " + sec);
 }
 
-
-
 timer();
 
 function showSlide(n) {
+    console.log(slides[currentSlide]);
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
@@ -135,9 +125,6 @@ function showSlide(n) {
     }
 }
 
-// Method C
-// startButton.addEventListener('click', showSlide);
-
 function showNextSlide() {
     showSlide(currentSlide + 1);
 }
@@ -146,13 +133,13 @@ function showPreviousSlide () {
     showSlide(currentSlide - 1);
 }
 
-var beginQuiz = document.getElementById('start');
 var containQuiz = document.getElementById('quiz');
 var containResults = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 var testQuestions = [
     {
         question: "What are variables used for in JavaScript Programs?",
+        number: 1,
         choices: {
             a: "Storing numbers, dates, or other values",
             b: "Causing high-school algebra flashbacks",
@@ -163,6 +150,7 @@ var testQuestions = [
     },
     {
         question: "What should appear at the very end of your JavaScript?",
+        number: 2,
         choices: {
             a: "The END statement",
             b: "The closing meta tag",
@@ -173,6 +161,7 @@ var testQuestions = [
     },
     {
         question: "What are Javascript functions capable of performing?",
+        number: 3,
         choices: {
             a: "return values",
             b: "accept parameters",
@@ -183,6 +172,7 @@ var testQuestions = [
     },
     {
         question: "Which of the following is NOT a vaild JavaScript variable name?",
+        number: 4,
         choices: {
             a: "pi",
             b: "produceArray",
@@ -193,6 +183,7 @@ var testQuestions = [
     },
     {
         question: "Which tag is an HTML extension that can enclose any number of JavaScript statemnts?",
+        number: 5,
         choices: {
             a: "header",
             b: "script",
@@ -203,17 +194,18 @@ var testQuestions = [
     },
     {
         question: "What is the correct syntax to write 'My Pet Dog' in JavaScript?",
+        number: 6,
         choices: {
             a: "response.write(\"My Pet Dog\")",
             b: "printIn(\"My Pet Dog\")",
             c: "System.out.printIn(\"My Pet Dog\")",
             d: "document.write(\"My Pet Dog\")"
-            //come back to this and put quotation marks
         },
         answer: "d"
     },
     {
         question: "In the HTML, where is the JavaScript correctly placed?",
+        number: 7,
         choices: {
             a: "head",
             b: "javascript",
@@ -224,6 +216,7 @@ var testQuestions = [
     },
     {
         question: "The correct syntax for linking a .html to a .js file contains ___________?",
+        number: 8,
         choices: {
             a: "src",
             b: "href",
@@ -234,6 +227,7 @@ var testQuestions = [
     },
     {
         question: "Which is the server-side JavaScript object?",
+        number: 9,
         choices: {
             a: "FileUpLoad",
             b: "function",
@@ -244,6 +238,7 @@ var testQuestions = [
     },
     {
         question: "How are specific conditions tested for in JavaScript? Which statement is utilized?",
+        number: 10,
         choices: {
             a: "If",
             b: "For",
@@ -254,26 +249,25 @@ var testQuestions = [
     }
 ];
 
+var questionNumber = 0;
+var choiceLetter = "";
+
+function renderQuestion () {
+    containQuiz.innerHTML = "";
+    // Questions
+    console.log(testQuestions[questionNumber]);
+    var questionEl = document.createElement('p');
+    questionEl.textContent = testQuestions[questionNumber].question;
+    containQuiz.appendChild(questionEl);
+}
+
+renderQuestion();
+
+setInterval(function() {
+    questionNumber++;
+    renderQuestion();
+}, 5000);
   
-// Method D
-// document.getElementById("start").onclick = quizStart();
-
-// Method E
-// var begin = document.getElementById("start");
-// if (begin.addEventListener)
-//     begin.addEventListener("click", quizStart, false);
-// else if (begin.attachEvent)
-//     begin.attachEvent('onclick', quizStart);
-
-quizStart();
-
-// Pagination
-
-// Method F
-// document.getElementById("start").addEventListener("click", function () {
-//     document.getElementById("quiz").innerHTML= beginQuiz.join(" ");
-// });
-
 // var startButton = document.getElementById('start');
 var previousButton = document.getElementById("previous");
 var nextButton = document.getElementById("next");
@@ -281,9 +275,6 @@ var slides = document.querySelectorAll(".slide");
 var currentSlide = 0;
 
 showSlide(currentSlide);
-
-// Method G
-//startButton.addEventListener('click', quizStart);
 
 submitButton.addEventListener('click', displayResults);
 
