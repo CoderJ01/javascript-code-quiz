@@ -1,3 +1,5 @@
+JavaScript
+
 function quizStart() {
 
         // store HTML output      
@@ -169,3 +171,21 @@ submitButton.addEventListener('click', displayResults);
 previousButton.addEventListener("click", showPreviousSlide);
 
 nextButton.addEventListener("click", showNextSlide);
+
+HTML
+
+<h1>JavaScript Quiz</h1>
+        <!-- <button id="start">Start Quiz</button> -->
+        <button id="start" onclick="quizStart()">Start Button</button>
+        <div id="quiz-timer">
+            <h2>Timer</h2>
+            <p id="timer-display"></p>
+        </div>
+        <div class="quiz-container"> 
+        <div id="quiz"></div>
+        </div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
+
