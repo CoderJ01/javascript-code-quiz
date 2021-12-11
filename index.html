@@ -6,22 +6,21 @@
         <title>Javascript Coding Quiz</title>
     </head>
     <body>
-        <h1>JavaScript Quiz</h1>
-        <!-- <button id="start">Start Quiz</button> -->
-        <button id="start" onclick="quizStart()">Start Button</button>
-        <div id="quiz-timer">
-            <h2>Timer</h2>
-            <p id="timer-display"></p>
-        </div>
-        <div class="quiz-container"> 
-        <div id="quiz"></div>
-        <div id="choices"></div>
-        </div>
-        <button id="previous">Previous Question</button>
-        <button id="next">Next Question</button>
-        <button id="submit">Submit Quiz</button>
-        <div id="results"></div>
-        
+        <div id="frame">
+            <div id="font">
+                <h2>Javascript Quiz</h2><text>Question: <text id="q-number">0</text></text><br />
+                <text>Score: <text id="score">0</text></text><br />
+                <text>Time: <text id="time">20</text></text><br />
+                <hr />
+                <div id="disappear">
+                    <button class="buttons" onclick="startQuiz()">Start Quiz</button>
+                </div>
+                <p id="message1"></p>
+                <p id="message2"></p>
+                <p id="message3"></p>
+                <p id="message4"></p>
+            </div>
+        </div>   
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
