@@ -1,115 +1,219 @@
 var testQuestions = [
     {
         question: "What are variables used for in JavaScript Programs?",
-        number: 1,
-        choices: [
-            "Storing numbers, dates, or other values",
-            "Causing high-school algebra flashbacks",
-            "Varying randomly",
-            "None of the above"
-        ],
-        answer: "Storing numbers, dates, or other values"
+        choices: {
+            a: "Storing numbers, dates, or other values",
+            b: "Causing high-school algebra flashbacks",
+            c: "Varying randomly",
+            d: "None of the above"
+        },
+        answer: "a"
     },
     {
         question: "What should appear at the very end of your JavaScript?",
-        number: 2,
-        choices: [
-            "The END statement",
-            "The closing meta tag",
-            "The closing script tag",
-            "None of the above"
-        ],
-        answer: "The closing script tag"
+        choices: {
+            a: "The END statement",
+            b: "The closing meta tag",
+            c: "The closing script tag",
+            d: "None of the above"
+        },
+        answer: "c"
     },
     {
         question: "What are Javascript functions capable of performing?",
-        number: 3,
-        choices: [
-            "return values",
-            "accept parameters",
-            "Both",
-            "Neither",
-        ],
-        answer: "accept parameters"
+        choices: {
+            a: "return values",
+            b: "accept parameters",
+            c: "Both",
+            d: "Neither"
+        },
+        answer: "b"
     },
     {
         question: "Which of the following is NOT a vaild JavaScript variable name?",
-        number: 4,
-        choices: [
-            "pi",
-            "produceArray",
-            "generate_string",
-            "5listof2dogs"
-        ],
-        answer: "5listof2dogs"
+        choices: {
+            a: "pi",
+            b: "produceArray",
+            c: "generate_string",
+            d: "5listof2dogs"
+        },
+        answer: "d"
     },
     {
         question: "Which tag is an HTML extension that can enclose any number of JavaScript statemnts?",
-        number: 5,
-        choices: [
-            "header",
-            "script",
-            "footer",
-            "title"
-        ],
-        answer: "script"
+        choices: {
+            a: "header",
+            b: "script",
+            c: "footer",
+            d: "title"
+        },
+        answer: "b"
     },
     {
         question: "What is the correct syntax to write 'My Pet Dog' in JavaScript?",
-        number: 6,
-        choices: [
-            "response.write(\"My Pet Dog\")",
-            "printIn(\"My Pet Dog\")",
-            "System.out.printIn(\"My Pet Dog\")",
-            "document.write(\"My Pet Dog\")"
-        ],
-        answer: "document.write(\"My Pet Dog\")"
+        choices: {
+            a: "response.write(\"My Pet Dog\")",
+            b: "printIn(\"My Pet Dog\")",
+            c: "System.out.printIn(\"My Pet Dog\")",
+            d: "document.write(\"My Pet Dog\")"
+            //come back to this and put quotation marks
+        },
+        answer: "d"
     },
     {
         question: "In the HTML, where is the JavaScript correctly placed?",
-        number: 7,
-        choices: [
-            "head",
-            "javascript",
-            "script",
-            "js"
-        ],
-        answer: "script"
+        choices: {
+            a: "head",
+            b: "javascript",
+            c: "script",
+            d: "js"
+        },
+        answer: "c"
     },
     {
         question: "The correct syntax for linking a .html to a .js file contains ___________?",
-        number: 8,
-        choices: [
-            "src",
-            "href",
-            "rel",
-            "id"
-        ],
-        answer: "src"
+        choices: {
+            a: "src",
+            b: "href",
+            c: "rel",
+            d: "id"
+        },
+        answer: "a"
     },
     {
         question: "Which is the server-side JavaScript object?",
-        number: 9,
-        choices: [
-            "FileUpLoad",
-            "function",
-            "date",
-            "file"
-        ],
-        answer: "file"
+        choices: {
+            a: "FileUpLoad",
+            b: "function",
+            c: "date",
+            d: "file"
+        },
+        answer: "d"
     },
     {
         question: "How are specific conditions tested for in JavaScript? Which statement is utilized?",
-        number: 10,
-        choices: [
-            "If",
-            "For",
-            "Select",
-            "Switch"
-        ],
-        answer: "If"
+        choices: {
+            a: "If",
+            b: "For",
+            c: "Select",
+            d: "Switch"
+        },
+        answer: "a"
     }
 ];
+
+// var testQuestions = [
+//     {
+//         question: "What are variables used for in JavaScript Programs?",
+//         number: 1,
+//         choices: [
+//             "Storing numbers, dates, or other values",
+//             "Causing high-school algebra flashbacks",
+//             "Varying randomly",
+//             "None of the above"
+//         ],
+//         answer: "Storing numbers, dates, or other values"
+//     },
+//     {
+//         question: "What should appear at the very end of your JavaScript?",
+//         number: 2,
+//         choices: [
+//             "The END statement",
+//             "The closing meta tag",
+//             "The closing script tag",
+//             "None of the above"
+//         ],
+//         answer: "The closing script tag"
+//     },
+//     {
+//         question: "What are Javascript functions capable of performing?",
+//         number: 3,
+//         choices: [
+//             "return values",
+//             "accept parameters",
+//             "Both",
+//             "Neither",
+//         ],
+//         answer: "accept parameters"
+//     },
+//     {
+//         question: "Which of the following is NOT a vaild JavaScript variable name?",
+//         number: 4,
+//         choices: [
+//             "pi",
+//             "produceArray",
+//             "generate_string",
+//             "5listof2dogs"
+//         ],
+//         answer: "5listof2dogs"
+//     },
+//     {
+//         question: "Which tag is an HTML extension that can enclose any number of JavaScript statemnts?",
+//         number: 5,
+//         choices: [
+//             "header",
+//             "script",
+//             "footer",
+//             "title"
+//         ],
+//         answer: "script"
+//     },
+//     {
+//         question: "What is the correct syntax to write 'My Pet Dog' in JavaScript?",
+//         number: 6,
+//         choices: [
+//             "response.write(\"My Pet Dog\")",
+//             "printIn(\"My Pet Dog\")",
+//             "System.out.printIn(\"My Pet Dog\")",
+//             "document.write(\"My Pet Dog\")"
+//         ],
+//         answer: "document.write(\"My Pet Dog\")"
+//     },
+//     {
+//         question: "In the HTML, where is the JavaScript correctly placed?",
+//         number: 7,
+//         choices: [
+//             "head",
+//             "javascript",
+//             "script",
+//             "js"
+//         ],
+//         answer: "script"
+//     },
+//     {
+//         question: "The correct syntax for linking a .html to a .js file contains ___________?",
+//         number: 8,
+//         choices: [
+//             "src",
+//             "href",
+//             "rel",
+//             "id"
+//         ],
+//         answer: "src"
+//     },
+//     {
+//         question: "Which is the server-side JavaScript object?",
+//         number: 9,
+//         choices: [
+//             "FileUpLoad",
+//             "function",
+//             "date",
+//             "file"
+//         ],
+//         answer: "file"
+//     },
+//     {
+//         question: "How are specific conditions tested for in JavaScript? Which statement is utilized?",
+//         number: 10,
+//         choices: [
+//             "If",
+//             "For",
+//             "Select",
+//             "Switch"
+//         ],
+//         answer: "If"
+//     }
+// ];
 
 function quizStart() {
 
@@ -163,6 +267,7 @@ var containsAnswers = containQuiz.querySelectorAll('.choices');
 var correctNum = 0;
 
 // for each question...
+
 testQuestions.forEach (
 
     (currentQuestion, questionNumber) => {
@@ -183,6 +288,8 @@ testQuestions.forEach (
         else {
             containsAnswers[questionNumber].style.color = 'red';
         }
+
+        return userSelection;
     }
 );
 
@@ -190,7 +297,6 @@ containResults.innerHTML = `${correctNum} out of ${testQuestions.length}`;
 }
 
 var sec = 59;
-
 function timer () {
 
 var countdown = document.getElementById('timer-display');
@@ -210,7 +316,6 @@ var timer = setInterval(function() {
         clearInterval(timer);
     }
 }, 1000);
-console.log("sec: " + sec);
 }
 
 timer();
@@ -251,27 +356,36 @@ var containResults = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
 var questionNumber = 0;
-var choiceLetter = "";
 
 function renderQuestion () {
-containQuiz.innerHTML = "";
-// Questions
-console.log(testQuestions[questionNumber]);
-var questionEl = document.createElement('p');
-questionEl.textContent = testQuestions[questionNumber].question;
-containQuiz.appendChild(questionEl);
 
-var choicesEl = document.createElement('p');
-choicesEl.textContent = testQuestions[questionNumber].choices;
-containQuiz.appendChild(choicesEl);
+    containQuiz.innerHTML = "";
+    // Questions
+    console.log(testQuestions[questionNumber]);
+    var questionEl = document.createElement('p');
+    questionEl.textContent = testQuestions[questionNumber].question;
+    containQuiz.appendChild(questionEl);  
+    
+    // Choices
+    var choicesEl = document.createElement('p');
+    choicesEl.textContent = testQuestions[questionNumber].choices + " hiuhuihu";
+    containQuiz.appendChild(choicesEl);
+    // choicesEl.setAttribute("color: blue;");
+  
+    // choicesEl = document.createElement('input');
+    // choicesEl.setAttribute('type', 'radio');
+    // choicesEl.setAttribute('name', name);
+
 }
 
-renderQuestion();
+// renderQuestion();
+quizStart();
 
-setInterval(function() {
-questionNumber++;
-renderQuestion();
-}, 5000);
+// setInterval(function() {
+// questionNumber++;
+// quizStart();
+// // renderQuestion();
+// }, 5000);
 
 // var startButton = document.getElementById('start');
 var previousButton = document.getElementById("previous");
