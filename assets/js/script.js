@@ -31,6 +31,8 @@ b++;
 
 var c;
 
+begone.innerHTML = "";
+
 function startQuiz() {
     c = 10; // c = time
     disappear.innerHTML = "";
@@ -466,28 +468,6 @@ update = setInterval("timer001()", 1000);
 function repeat001() {
     location.reload();
 }
-
-// var inputI = document.getElementById("inputInitials");
-// var keptScore = document.getElementById("scoreKept");
-// var insertButton = document.getElementById("infoButton");
-// var outputList = document.getElementById("output");
-
-// insertButton.onclick = function () {
-//     var initPlaced = inputI.value;
-//     var scoreShown = keptScore.value;
-
-//     if(initPlaced != null && scoreShown != null) {
-//         localStorage.setItem(initPlaced, scoreShown);
-//         location.reload();
-//     }
-
-//     for(var i = 0; i < localStorage.length; i++) {
-//         var initPlaced = localStorage.initPlaced(i);
-//         var scoreDisplayed = localStorage.getItem(initPlaced);
-    
-//         outputList.innerHTML += `${initPlaced}: ${scoreDisplayed}<br />`;
-//     } 
-// };
 
 function save() {
     var new_data = document.getElementById('inputInit').value;
