@@ -29,6 +29,8 @@ a++;
 var b = 0;
 b++;
 
+var c;
+
 function startQuiz() {
     c = 10; // c = time
     disappear.innerHTML = "";
@@ -234,6 +236,7 @@ function q7i() {
 function q7j() {
     window.clearInterval(update);
     c = "-";
+    message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
 }
 
@@ -438,7 +441,6 @@ function next001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
-        input001.innerHTML = "<input class=type-initials onclick=add001()>"
     }
 }
 
@@ -465,23 +467,24 @@ function repeat001() {
     location.reload();
 }
 
-// Store score 
-// var body = body.document;
-// var keepScore = document.getElementById('input001');
-// var fieldinput = document.createElement("fieldset");
-// var legend = document.createElement("legend");
-// var inputInitials = document.createElement("input");
-// var scoreEarned = document.createElement("input");
+var inputI = document.getElementById("inputInitials");
+var keptScore = document.getElementById("scoreKept");
+var InsertButton = document.getElementById("infoButton");
+var outputList = document.getElementById("output");
 
-// body.appendChild(keepScore);
-// keepScore.appendChild(fieldinput);
-// fieldinput.appendChild(legend);
-// legend.appendChild(inputInitials);
-// legend.appendChild(scoreEarned);
+InsertButton.onclick = function () {
+    var initPlaced = inputI.value;
+    var scoreShown = keptScore.value;
 
-fieldset.innerHTML = "<fieldset></fieldset>";
-fieldset.document.appendChild(legend);
-legend.innerHTML = "<legend>Input Initials<legend>";
+    if(initPlaced != null && scoreShown != null) {
+        localStorage.setItem(initPlaced, scoreShown);
+        location.reload();
+    }
+};
 
+for(var i = 0; i < localStorage.length; i++) {
+    var initPlaced = localStorage.initPlaced[i];
+    var scoreDisplayed = localStorage.getItem(initPlaced);
 
-
+    outputList.innerHTML += `${initPlaced}: ${scoreDisplayed}<br />`;
+}   

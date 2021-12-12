@@ -24,9 +24,14 @@
         <div id="begone">
             <h2>Scores</h2>
             <fieldset>
-                <legend>Insert Initials</legend>
-                <input id="input-initials" type="text" placeholder="Initials">
-                <input id="score" type="text" placeholder="Score">
+                <legend>Insert Name or Initials</legend>
+                <input id="inputInitials" type="text" placeholder="Name or initials" />
+                <input id="scoreKept" type="text" placeholder="Score" />
+                <button type="button" id="infoButton">Insert Data</button>
+            </fieldset>
+            <fieldset>
+                <legend>Scores</legend>
+                <div class ="listed-scores" id="output"></div>            
             </fieldset>
         </div>
         <script src="./assets/js/script.js"></script>
