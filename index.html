@@ -8,7 +8,7 @@
     <body>
         <div id="frame">
             <div id="font">
-                <h2>Javascript Quiz</h2><text>Question: <text id="qNumber">0</text></text><br />
+                <h1>Javascript Quiz</h1><text>Question: <text id="qNumber">0</text></text><br />
                 <hr />
                 <div id="disappear">
                     <button class="start-button" onclick="startQuiz()">Start</button>
@@ -20,7 +20,15 @@
                 <text>Score: <text id="score">0</text></text><br />
                 <text>Time: <text id="time">10</text></text><br />
             </div>
-        </div>   
+        </div>
+        <div id="begone">
+            <h2>Scores</h2>
+            <fieldset>
+                <legend>Insert Initials</legend>
+                <input id="input-initials" type="text" placeholder="Initials">
+                <input id="score" type="text" placeholder="Score">
+            </fieldset>
+        </div>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>

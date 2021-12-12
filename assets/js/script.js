@@ -438,6 +438,7 @@ function next001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        input001.innerHTML = "<input class=type-initials onclick=add001()>"
     }
 }
 
@@ -454,6 +455,7 @@ function timer001() {
         message001.innerHTML = "Time's up";
         message002.innerHTML = "";
         message003.innerHTML = "";
+        message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
     }
 }
 
@@ -462,3 +464,24 @@ update = setInterval("timer001()", 1000);
 function repeat001() {
     location.reload();
 }
+
+// Store score 
+// var body = body.document;
+// var keepScore = document.getElementById('input001');
+// var fieldinput = document.createElement("fieldset");
+// var legend = document.createElement("legend");
+// var inputInitials = document.createElement("input");
+// var scoreEarned = document.createElement("input");
+
+// body.appendChild(keepScore);
+// keepScore.appendChild(fieldinput);
+// fieldinput.appendChild(legend);
+// legend.appendChild(inputInitials);
+// legend.appendChild(scoreEarned);
+
+fieldset.innerHTML = "<fieldset></fieldset>";
+fieldset.document.appendChild(legend);
+legend.innerHTML = "<legend>Input Initials<legend>";
+
+
+
