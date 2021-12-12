@@ -25,9 +25,9 @@ var a = 0;
 a++;
 var b = 0;
 b++;
-c = 100;
 
 function startQuiz() {
+    c = 10;
     disappear.innerHTML = "";
     message001.innerHTML = questions[0];
     message002.innerHTML = queOneOptions;
@@ -295,8 +295,8 @@ function q10k() {
 function next001() {
     if (a == "2") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[1];
         message002.innerHTML = queTwoOptions;
         message003.innerHTML = "";
@@ -306,8 +306,8 @@ function next001() {
 
     else if (a == "3") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[2];
         message002.innerHTML = queThreeOptions;
         message003.innerHTML = "";
@@ -317,8 +317,8 @@ function next001() {
 
     else if (a == "4") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[3];
         message002.innerHTML = queFourOptions;
         message003.innerHTML = "";
@@ -328,8 +328,8 @@ function next001() {
 
     else if (a == "5") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[4];
         message002.innerHTML = queFiveOptions;
         message003.innerHTML = "";
@@ -339,8 +339,8 @@ function next001() {
 
     else if (a == "6") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[5];
         message002.innerHTML = queSixOptions;
         message003.innerHTML = "";
@@ -350,8 +350,8 @@ function next001() {
 
     else if (a == "7") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[6];
         message002.innerHTML = queSevenOptions;
         message003.innerHTML = "";
@@ -361,8 +361,8 @@ function next001() {
 
     else if (a == "8") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[7];
         message002.innerHTML = queEightOptions;
         message003.innerHTML = "";
@@ -372,8 +372,8 @@ function next001() {
 
     else if (a == "9") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[8];
         message002.innerHTML = queNineOptions;
         message003.innerHTML = "";
@@ -383,8 +383,8 @@ function next001() {
 
     else if (a == "10") {
         update = setInterval("timer001()", 1000);
-        c = 20;
-        time.innerHTML = 20;
+        c = 10;
+        time.innerHTML = 10;
         message001.innerHTML = questions[9];
         message002.innerHTML = queTenOptions;
         message003.innerHTML = "";
@@ -399,6 +399,8 @@ function next001() {
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
     }
 }
+
+// Time Keeper
 
 function timer001() {
     c = c - 1;
