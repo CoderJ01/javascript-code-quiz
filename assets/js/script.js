@@ -467,24 +467,47 @@ function repeat001() {
     location.reload();
 }
 
-var inputI = document.getElementById("inputInitials");
-var keptScore = document.getElementById("scoreKept");
-var InsertButton = document.getElementById("infoButton");
-var outputList = document.getElementById("output");
+// var inputI = document.getElementById("inputInitials");
+// var keptScore = document.getElementById("scoreKept");
+// var insertButton = document.getElementById("infoButton");
+// var outputList = document.getElementById("output");
 
-InsertButton.onclick = function () {
-    var initPlaced = inputI.value;
-    var scoreShown = keptScore.value;
+// insertButton.onclick = function () {
+//     var initPlaced = inputI.value;
+//     var scoreShown = keptScore.value;
 
-    if(initPlaced != null && scoreShown != null) {
-        localStorage.setItem(initPlaced, scoreShown);
-        location.reload();
+//     if(initPlaced != null && scoreShown != null) {
+//         localStorage.setItem(initPlaced, scoreShown);
+//         location.reload();
+//     }
+
+//     for(var i = 0; i < localStorage.length; i++) {
+//         var initPlaced = localStorage.initPlaced(i);
+//         var scoreDisplayed = localStorage.getItem(initPlaced);
+    
+//         outputList.innerHTML += `${initPlaced}: ${scoreDisplayed}<br />`;
+//     } 
+// };
+
+function save() {
+    var new_data = document.getElementById('inputInit').value;
+    
+    if(localStorage.getItem('data') == null) {
+        localStorage.setItem('data', '[]');
     }
-};
 
-for(var i = 0; i < localStorage.length; i++) {
-    var initPlaced = localStorage.initPlaced[i];
-    var scoreDisplayed = localStorage.getItem(initPlaced);
+    var old_data = JSON.parse(localStorage.getItem('data'));
+    old_data.push(new_data);
 
-    outputList.innerHTML += `${initPlaced}: ${scoreDisplayed}<br />`;
-}   
+    localStorage.setItem('data', JSON.stringify(old_data));
+}
+
+function view() {
+    if(localStorage.getItem('data') != null){
+        document.getElementById('output').innerHTML = JSON.parse(localStorage.getItem('data'));
+    } 
+}
+
+
+
+
