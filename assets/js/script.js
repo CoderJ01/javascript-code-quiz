@@ -2,7 +2,7 @@ var questions = [ "What are variables used for in JavaScript Programs?",
 "What should appear at the very end of your JavaScript?",
 "What are Javascript functions capable of performing?",
 "Which of the following is NOT a vaild JavaScript variable name?",
-"Which tag is an HTML extension that can enclose any number of JavaScript statemnts?",
+"Which tag is an HTML extension that can enclose any number of JavaScript statements?",
 "What is the correct syntax to write 'My Pet Dog' in JavaScript?",
 "In the HTML, where is the JavaScript correctly placed?",
 "The correct syntax for linking a .html to a .js file contains ___________?",
@@ -31,12 +31,14 @@ b++;
 
 var c;
 
+
 function startQuiz() {
     c = 10; // c = time
     disappear.innerHTML = "";
     message001.innerHTML = questions[0];
     message002.innerHTML = queOneOptions;
     qNumber.innerHTML = a++;
+    begone.innerHTML = "";
 }
 
 // Question 1
@@ -469,7 +471,7 @@ function repeat001() {
 }
 
 function save() {
-    var new_data = document.getElementById('inputInit').value;
+    var new_data = document.getElementById('inputInit').value + '\n';
     
     if(localStorage.getItem('data') == null) {
         localStorage.setItem('data', '[]');

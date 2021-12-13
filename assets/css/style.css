@@ -1,22 +1,17 @@
-body {
-  justify-content: center;
-  background-color: #2CD52E;
-}
-
 .super-frame {
   margin-top: 6%;
-  border: #A08616 solid 5px;
   width: 40%;
   margin-left: 29%;
-  background-color: #D1D627;
+  position: relative;
+}
+
+.frame {
+  position: relative;
 }
 
 .c-font p {
   font-weight: bold;
-}
-
-.frame, .begone {
-
+  font-size: 25px;
 }
 
 h1 {
@@ -25,9 +20,9 @@ h1 {
 
 button {
   padding: 10px;
-  border: 3px solid #A08616;
-  background-color: #A08616;
+  background-color: #2BA016;
   color: white;
+  border-radius: 5px;
 }
 
 .start-button{
@@ -44,4 +39,9 @@ text {
 
 .start-button {
   position: center;
+  
+}
+
+.font {
+  position: relative;
 }
