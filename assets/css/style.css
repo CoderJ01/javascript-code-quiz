@@ -20,8 +20,9 @@ h1 {
 
 button {
   padding: 10px;
-  background-color: #2BA016;
-  color: white;
+  background-color: #2BB25C;
+  border: 2px solid #2BB25C;
+  font-weight: bold;
   border-radius: 5px;
 }
 
