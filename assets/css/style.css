@@ -46,3 +46,91 @@ text {
 .font {
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+
+  .super-frame {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  .super-frame h1 {
+    font-size: 500%;
+  }
+
+  .c-font {
+    margin-top: -5%;
+  }
+
+  .c-font p {
+    font-size: 200%;
+  }
+
+  button {
+    padding: 2%;
+    font-size: 100%;
+  }
+
+  .start-button {
+    margin-left: 25%;
+    padding: 10%;
+    width: 50%;
+    font-size: 500%;
+  }
+
+  text {
+    font-size: 150%;
+  }
+
+  .display-number {
+    font-size: 95%;
+  }
+
+  .begone {
+    font-size: 135%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .super-frame h1 {
+    font-size: 400%; 
+  }
+
+  .c-font {
+    text-align: center; 
+  }
+
+  .start-button {
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+  .super-frame {
+    width: 95%;
+  }
+
+  .c-font {
+    margin-top: -12%;
+  }
+
+  .start-button {
+    margin-top: 7%;
+  }
+
+  .begone button {
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  .start-button {
+    width: 65%;
+    margin-left: 18%;
+  }
+}

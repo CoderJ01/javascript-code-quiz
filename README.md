@@ -9,15 +9,15 @@ The objective of this website is to quiz the website user on the programming lan
  * CSS
  * JavaScript
 
- ## Screenshot of Website
+## Screenshot of Website
 ![Alt text](./assets/images/image-screenshot.jpg?raw=true "JavaScript Coding Quiz")
 
- ## Website Link
+## Website Link
 https://coderj01.github.io/javascript-code-quiz/
 
- ## Challenges 
+## Challenges 
 
- The quiz functions sufficiently. Nevertheless, I will design the quiz to be able to automatically keep the score once I improve my JavaScript programming skills. I will also engineer the quiz to subtract time should the responder select an incorrect answer. 
+The quiz functions sufficiently. Nevertheless, I will design the quiz to be able to automatically keep the score once I improve my JavaScript programming skills. I will also engineer the quiz to subtract time should the responder select an incorrect answer. 
 
- ## Contribution
- Made by Joshua
+## Contribution
+Made by Joshua
