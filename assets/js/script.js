@@ -38,7 +38,6 @@ function startQuiz() {
     message001.innerHTML = questions[0];
     message002.innerHTML = queOneOptions;
     qNumber.innerHTML = a++;
-    begone.innerHTML = "";
 }
 
 // Question 1
