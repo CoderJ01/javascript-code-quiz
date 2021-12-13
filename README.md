@@ -10,10 +10,10 @@ The objective of this website is to quiz the website user on the programming lan
  * JavaScript
 
  ## Screenshot of Website
-
+![Alt text](./assets/image/image-screenshot.JPG?raw=true "JavaScript Coding Quiz")
 
  ## Website Link
-
+https://coderj01.github.io/javascript-code-quiz/
 
  ## Challenges 
 
