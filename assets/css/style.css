@@ -1,3 +1,47 @@
-fieldset {
-  margin-bottom: 20px;
+body {
+  justify-content: center;
+  background-color: #2CD52E;
+}
+
+.super-frame {
+  margin-top: 6%;
+  border: #A08616 solid 5px;
+  width: 40%;
+  margin-left: 29%;
+  background-color: #D1D627;
+}
+
+.c-font p {
+  font-weight: bold;
+}
+
+.frame, .begone {
+
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  border: 3px solid #A08616;
+  background-color: #A08616;
+  color: white;
+}
+
+.start-button{
+  margin-left: 45%;
+}
+
+.inputIn {
+  padding: 10px;
+}
+
+text {
+  font-weight: bold;
+}
+
+.start-button {
+  position: center;
 }

@@ -19,7 +19,7 @@ var queSixOptions = ["<button class=buttons001 onclick=q6i()>response.write(\"My
 var queSevenOptions = ["<button class=buttons001 onclick=q7i()>head</button><br /><br /><button class=buttons001 onclick=q7j()>javascript</button><br /><br /><button class=buttons001 onclick=q7c()>script</button><br /><br /><button class=buttons001 onclick=q7k()>js</button>"];
 var queEightOptions = ["<button class=buttons001 onclick=q8c()>src</button><br /><br /><button class=buttons001 onclick=q8i()>href</button><br /><br /><button class=buttons001 onclick=q8j()>rel</button><br /><br /><button class=buttons001 onclick=q8k()>id</button>"];
 var queNineOptions = ["<button class=buttons001 onclick=q9i()>date</button><br /><br /><button class=buttons001 onclick=q9j()>FileUpload</button><br /><br /><button class=buttons001 onclick=q9k()>function</button><br /><br /><button class=buttons001 onclick=q9c()>file</button>"];
-var queTenOptions = ["<button class=buttons001 onclick=q10c()>If</button><br /><br /><button class=buttons001 onclick=q10i()>For</button><br /><br /><button class=buttons001 onclick=q10j()>Select</button><br /><br /><button class=buttons001 onclick=q#k()>switch</button>"];
+var queTenOptions = ["<button class=buttons001 onclick=q10c()>If</button><br /><br /><button class=buttons001 onclick=q10i()>For</button><br /><br /><button class=buttons001 onclick=q10j()>Select</button><br /><br /><button class=buttons001 onclick=q#k()>continue</button>"];
 
 // a = question number
 var a = 0;
@@ -30,8 +30,6 @@ var b = 0;
 b++;
 
 var c;
-
-begone.innerHTML = "";
 
 function startQuiz() {
     c = 10; // c = time
@@ -174,6 +172,7 @@ function q5c() {
 function q5i() {
     window.clearInterval(update);
     c = "-";
+    message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
 }
 

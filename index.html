@@ -6,10 +6,11 @@
         <title>Javascript Coding Quiz</title>
     </head>
     <body>
-        <div id="frame">
-            <div id="font">
-                <h1>Javascript Quiz</h1><text>Question: <text id="qNumber">0</text></text><br />
-                <hr />
+        <div class="super-frame">
+        <div id="frame" class="frame">
+            <h1>Javascript Quiz</h1>
+            <div id="font" class="c-font">
+                <br />
                 <div id="disappear">
                     <button class="start-button" onclick="startQuiz()">Start</button>
                 </div>
@@ -17,16 +18,18 @@
                 <p id="message002"></p>
                 <p id="message003"></p>
                 <p id="message004"></p>
+                <text>Question: <text id="qNumber">0</text></text><br />
                 <text>Score: <text id="score">0</text></text><br />
                 <text>Time: <text id="time">10</text></text><br />
             </div>
         </div>
-        <div id="begone">
+        <div id="begone" class="begone">
             <h2>Scores</h2>
-            <input id="inputInit" />
-            <button onclick="save();">Save Initials</button>
+            <input id="inputInit" class="inputIn" />
+            <button onclick="save();">Save Initials and Score</button>
             <button onclick="view();">View Score</button>
             <p id="output"></p>
+        </div>
         </div>
         <script src="./assets/js/script.js"></script>
     </body>
