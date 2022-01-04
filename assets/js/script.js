@@ -443,6 +443,7 @@ function next001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        console.log(b);
     }
 }
 
@@ -468,25 +469,46 @@ update = setInterval("timer001()", 1000);
 function repeat001() {
     location.reload();
 }
+var inpKey = document.getElementById('inpKey');
+var inpValue = document.getElementById('inpValue');
+var btnInsert = document.getElementById('btnInsert');
+var IsOutput = document.getElementById('IsOutput');
 
-function save() {
-    var new_data = document.getElementById('inputInit').value + '\n';
-    
-    if(localStorage.getItem('data') == null) {
-        localStorage.setItem('data', '[]');
+btnInsert.onclick = function () {
+    var key = inpKey.value;
+    var value = inpValue.value;
+
+    if (key && value) {
+        localStorage.setItem(key, value);
+        location.reload();
     }
-
-    var old_data = JSON.parse(localStorage.getItem('data'));
-    old_data.push(new_data);
-
-    localStorage.setItem('data', JSON.stringify(old_data));
 }
 
-function view() {
-    if(localStorage.getItem('data') != null){
-        document.getElementById('output').innerHTML = JSON.parse(localStorage.getItem('data'));
-    } 
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    var value = localStorage.getItem(key);
+
+    IsOutput.innerHTML += `${key}: ${value}<br />`;
 }
+
+// function save() {
+//     var new_data = document.getElementById('inputInit').value + '\n';
+    
+//     if(localStorage.getItem('data') == null) {
+//         localStorage.setItem('data', '[]');
+//     }
+
+//     var old_data = JSON.parse(localStorage.getItem('data'));
+//     old_data.push(new_data);
+
+//     localStorage.setItem('data', JSON.stringify(old_data));
+// }
+
+// function view() {
+//     if(localStorage.getItem('data') != null){
+//         document.getElementById('').innerHTML = JSON.parse(localStorage.getItem('data'));
+//     } 
+// }
 
 
 
