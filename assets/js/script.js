@@ -19,7 +19,7 @@ var queSixOptions = ["<button class=buttons001 onclick=q6i()>response.write(\"My
 var queSevenOptions = ["<button class=buttons001 onclick=q7i()>head</button><br /><br /><button class=buttons001 onclick=q7j()>javascript</button><br /><br /><button class=buttons001 onclick=q7c()>script</button><br /><br /><button class=buttons001 onclick=q7k()>js</button>"];
 var queEightOptions = ["<button class=buttons001 onclick=q8c()>src</button><br /><br /><button class=buttons001 onclick=q8i()>href</button><br /><br /><button class=buttons001 onclick=q8j()>rel</button><br /><br /><button class=buttons001 onclick=q8k()>id</button>"];
 var queNineOptions = ["<button class=buttons001 onclick=q9i()>date</button><br /><br /><button class=buttons001 onclick=q9j()>FileUpload</button><br /><br /><button class=buttons001 onclick=q9k()>function</button><br /><br /><button class=buttons001 onclick=q9c()>file</button>"];
-var queTenOptions = ["<button class=buttons001 onclick=q10c()>If</button><br /><br /><button class=buttons001 onclick=q10i()>For</button><br /><br /><button class=buttons001 onclick=q10j()>Select</button><br /><br /><button class=buttons001 onclick=q#k()>continue</button>"];
+var queTenOptions = ["<button class=buttons001 onclick=q10c()>If</button><br /><br /><button class=buttons001 onclick=q10i()>For</button><br /><br /><button class=buttons001 onclick=q10j()>Select</button><br /><br /><button class=buttons001 onclick=q10k()>switch</button>"];
 
 // a = question number
 var a = 0;
@@ -30,6 +30,8 @@ var b = 0;
 b++;
 
 var c;
+
+document.getElementById('begone').style.display = "none";
 
 
 function startQuiz() {
@@ -443,7 +445,8 @@ function next001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
-        console.log(b);
+        var score = b - 1;
+        keepScore(score);
     }
 }
 
@@ -461,6 +464,8 @@ function timer001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        var score = b - 1;
+        keepScore(score);
     }
 }
 
@@ -469,20 +474,27 @@ update = setInterval("timer001()", 1000);
 function repeat001() {
     location.reload();
 }
+
 var inpKey = document.getElementById('inpKey');
 var inpValue = document.getElementById('inpValue');
 var btnInsert = document.getElementById('btnInsert');
 var IsOutput = document.getElementById('IsOutput');
 
-btnInsert.onclick = function () {
-    var key = inpKey.value;
-    var value = inpValue.value;
+function keepScore (score) {
 
-    if (key && value) {
-        localStorage.setItem(key, value);
-        location.reload();
+    btnInsert.onclick = function () {
+        var key = inpKey.value;
+        var value = score;
+    
+        if (key && value) {
+            localStorage.setItem(key, value);
+            location.reload();
+        }
     }
+    
 }
+
+keepScore();
 
 for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
@@ -491,24 +503,6 @@ for (var i = 0; i < localStorage.length; i++) {
     IsOutput.innerHTML += `${key}: ${value}<br />`;
 }
 
-// function save() {
-//     var new_data = document.getElementById('inputInit').value + '\n';
-    
-//     if(localStorage.getItem('data') == null) {
-//         localStorage.setItem('data', '[]');
-//     }
-
-//     var old_data = JSON.parse(localStorage.getItem('data'));
-//     old_data.push(new_data);
-
-//     localStorage.setItem('data', JSON.stringify(old_data));
-// }
-
-// function view() {
-//     if(localStorage.getItem('data') != null){
-//         document.getElementById('').innerHTML = JSON.parse(localStorage.getItem('data'));
-//     } 
-// }
 
 
 
