@@ -480,6 +480,7 @@ var inpKey = document.getElementById('inpKey');
 var inpValue = document.getElementById('inpValue');
 var btnInsert = document.getElementById('btnInsert');
 var IsOutput = document.getElementById('IsOutput');
+var btnView = document.getElementById('btnView');
 
 function keepScore (score) {
 
@@ -492,17 +493,21 @@ function keepScore (score) {
             location.reload();
         }
     }
+
+    for (var i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
+
+        IsOutput.innerHTML += `${key}: ${value}<br />`;
+    }   
     
 }
 
 keepScore();
 
-for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-    var value = localStorage.getItem(key);
+    
 
-    IsOutput.innerHTML += `${key}: ${value}<br />`;
-}
+
 
 
 

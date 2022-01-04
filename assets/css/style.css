@@ -65,6 +65,22 @@ text {
   border: 2px solid #2BB25C;
 }
 
+.score-keeper fieldset {
+  border: none;
+}
+
+#btnView {
+  margin-left: -280px;
+  margin-top: -250px;
+  position: absolute;
+}
+
+#IsOutput {
+  position: relative;
+  margin-left: -290px;
+  margin-top: -200px;
+}
+
 @media screen and (max-width: 768px) {
 
   .super-frame {
