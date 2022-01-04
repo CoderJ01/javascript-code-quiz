@@ -451,6 +451,7 @@ function next001() {
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
         document.getElementById('begone').style.display = "block";
+        document.getElementById('note').style.display = "none";
         var score = b - 1;
         keepScore(score);
     }
@@ -471,6 +472,7 @@ function timer001() {
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
         document.getElementById('begone').style.display = "block";
+        document.getElementById('note').style.display = "none";
         var score = b - 1;
         keepScore(score);
     }
