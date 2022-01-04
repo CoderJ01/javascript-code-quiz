@@ -33,7 +33,6 @@ var c;
 
 document.getElementById('begone').style.display = "none";
 
-
 function startQuiz() {
     c = 10; // c = time
     disappear.innerHTML = "";
@@ -445,6 +444,7 @@ function next001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        document.getElementById('begone').style.display = "block";
         var score = b - 1;
         keepScore(score);
     }
@@ -464,6 +464,7 @@ function timer001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        document.getElementById('begone').style.display = "block";
         var score = b - 1;
         keepScore(score);
     }
