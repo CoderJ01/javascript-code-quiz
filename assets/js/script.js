@@ -1,3 +1,9 @@
+var inpKey = document.getElementById('inpKey');
+var inpValue = document.getElementById('inpValue');
+var btnInsert = document.getElementById('btnInsert');
+var IsOutput = document.getElementById('IsOutput');
+var btnView = document.getElementById('btnView');
+
 var questions = [ "What are variables used for in JavaScript Programs?",
 "What should appear at the very end of your JavaScript?",
 "What are Javascript functions capable of performing?",
@@ -476,12 +482,6 @@ function repeat001() {
     location.reload();
 }
 
-var inpKey = document.getElementById('inpKey');
-var inpValue = document.getElementById('inpValue');
-var btnInsert = document.getElementById('btnInsert');
-var IsOutput = document.getElementById('IsOutput');
-var btnView = document.getElementById('btnView');
-
 function keepScore (score) {
 
     btnInsert.onclick = function () {
@@ -492,20 +492,18 @@ function keepScore (score) {
             localStorage.setItem(key, value);
             location.reload();
         }
-    }
+    }  
 
     for (var i = 0; i < localStorage.length; i++) {
         var key = localStorage.key(i);
         var value = localStorage.getItem(key);
 
-        IsOutput.innerHTML += `${key}: ${value}<br />`;
-    }   
-    
+        IsOutput.innerHTML += `<span style="font-weight: bold">${key}: ${value}</span><br />`;
+    }  
 }
 
-keepScore();
 
-    
+
 
 
 
