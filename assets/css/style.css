@@ -69,12 +69,6 @@ text {
   border: none;
 }
 
-#btnView {
-  margin-left: -280px;
-  margin-top: -250px;
-  position: absolute;
-}
-
 #IsOutput {
   position: relative;
   margin-left: -290px;
@@ -123,6 +117,36 @@ text {
   .begone {
     font-size: 135%;
   }
+
+  #note {
+    font-size: 32px;
+  }
+
+  #begone h2 {
+    font-size: 35px;
+  }
+
+  #begone legend {
+    font-size: 33px;
+  }
+
+  #inpKey {
+    width: 60%;
+    height: 100px;
+    font-size: 40px;
+  }
+
+  #begone fieldset button {
+    height: 110px;
+    width: 30%;
+    font-size: 35px;
+  }
+
+  #IsOutput {
+    margin-left: 0px;
+    font-size: 35px;
+    margin-top: 2px;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -139,6 +163,35 @@ text {
     margin-left: 25%;
     display: flex;
     justify-content: center;
+  }
+
+  #note {
+    font-size: 32px;
+  }
+
+  #begone {
+    margin-top: -50px;
+  }
+
+  #begone h2 {
+    margin-left: 17px;
+  }
+
+  #inpKey {
+    height: 50px;
+    font-size: 40px;
+    width: 60%;
+  }
+
+  #begone fieldset button {
+    margin-top: 80px;
+    width: 60%;
+    height: 70px;
+    margin-left: -315px;
+  }
+
+  #IsOutput {
+    margin-top: 75px;
   }
 }
 
@@ -158,6 +211,30 @@ text {
 
   .begone button {
     margin-top: 3%;
+  }
+
+  #begone h2 {
+    margin-left: 135px;
+  }
+
+  #begone legend {
+    margin-left: 39px;
+  }
+
+  #inpKey {
+    margin-left: 6px;
+    width: 95%;
+  }
+
+  #begone fieldset button {
+    margin-left: 5px;
+    margin-top: 20px;
+    width: 95%;
+  }
+
+  #IsOutput {
+    margin-top: 100px;
+    margin-left: 100px;
   }
 }
 
