@@ -1,3 +1,9 @@
+var inpKey = document.getElementById('inpKey');
+var inpValue = document.getElementById('inpValue');
+var btnInsert = document.getElementById('btnInsert');
+var IsOutput = document.getElementById('IsOutput');
+var btnView = document.getElementById('btnView');
+
 var questions = [ "What are variables used for in JavaScript Programs?",
 "What should appear at the very end of your JavaScript?",
 "What are Javascript functions capable of performing?",
@@ -19,7 +25,7 @@ var queSixOptions = ["<button class=buttons001 onclick=q6i()>response.write(\"My
 var queSevenOptions = ["<button class=buttons001 onclick=q7i()>head</button><br /><br /><button class=buttons001 onclick=q7j()>javascript</button><br /><br /><button class=buttons001 onclick=q7c()>script</button><br /><br /><button class=buttons001 onclick=q7k()>js</button>"];
 var queEightOptions = ["<button class=buttons001 onclick=q8c()>src</button><br /><br /><button class=buttons001 onclick=q8i()>href</button><br /><br /><button class=buttons001 onclick=q8j()>rel</button><br /><br /><button class=buttons001 onclick=q8k()>id</button>"];
 var queNineOptions = ["<button class=buttons001 onclick=q9i()>date</button><br /><br /><button class=buttons001 onclick=q9j()>FileUpload</button><br /><br /><button class=buttons001 onclick=q9k()>function</button><br /><br /><button class=buttons001 onclick=q9c()>file</button>"];
-var queTenOptions = ["<button class=buttons001 onclick=q10c()>If</button><br /><br /><button class=buttons001 onclick=q10i()>For</button><br /><br /><button class=buttons001 onclick=q10j()>Select</button><br /><br /><button class=buttons001 onclick=q#k()>continue</button>"];
+var queTenOptions = ["<button class=buttons001 onclick=q10c()>If</button><br /><br /><button class=buttons001 onclick=q10i()>For</button><br /><br /><button class=buttons001 onclick=q10j()>Select</button><br /><br /><button class=buttons001 onclick=q10k()>switch</button>"];
 
 // a = question number
 var a = 0;
@@ -31,19 +37,19 @@ b++;
 
 var c;
 
+document.getElementById('begone').style.display = "none";
 
 function startQuiz() {
-    c = 10; // c = time
     disappear.innerHTML = "";
     message001.innerHTML = questions[0];
     message002.innerHTML = queOneOptions;
     qNumber.innerHTML = a++;
+    c = 40;
 }
 
 // Question 1
 
 function q1c() {
-    c = "-";
     window.clearInterval(update);
     score.innerHTML = b++;
     message002.innerHTML = "";
@@ -51,31 +57,30 @@ function q1c() {
 }
 
 function q1i() {
-    c = "-";
     window.clearInterval(update);
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q1j() {
-    c = "-";
     window.clearInterval(update);
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q1k() {
-    c = "-";
     window.clearInterval(update);
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 // Question 2
 
 function q2c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -83,30 +88,29 @@ function q2c() {
 
 function q2i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q2j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q2k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 // Question 3
 
 function q3c() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     score.innerHTML = b++;
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -114,28 +118,29 @@ function q3c() {
 
 function q3i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q3j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q3k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
+
 // Question 4
+
 function q4c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -143,28 +148,28 @@ function q4c() {
 
 function q4i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q4j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q4k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 // Question 5
+
 function q5c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -172,28 +177,29 @@ function q5c() {
 
 function q5i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q5j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q5k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
+
 // Question 6
+
 function q6c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -201,28 +207,29 @@ function q6c() {
 
 function q6i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q6j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q6k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
+
 // Question 7
+
 function q7c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -230,28 +237,28 @@ function q7c() {
 
 function q7i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q7j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q7k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
+
 // Question 8
 function q8c() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     score.innerHTML = b++;
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -259,28 +266,29 @@ function q8c() {
 
 function q8i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q8j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q8k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
+
 // Question 9
+
 function q9c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -288,28 +296,29 @@ function q9c() {
 
 function q9i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q9j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q9k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
+
 // Question 10
+
 function q10c() {
     window.clearInterval(update);
-    c = "-";
     score.innerHTML = b++;
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -317,23 +326,23 @@ function q10c() {
 
 function q10i() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q10j() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 function q10k() {
     window.clearInterval(update);
-    c = "-";
     message002.innerHTML = "";
     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+    c = c - 3;
 }
 
 // next
@@ -341,8 +350,6 @@ function q10k() {
 function next001() {
     if (a == "2") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[1];
         message002.innerHTML = queTwoOptions;
         message003.innerHTML = "";
@@ -352,8 +359,6 @@ function next001() {
 
     else if (a == "3") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[2];
         message002.innerHTML = queThreeOptions;
         message003.innerHTML = "";
@@ -363,8 +368,6 @@ function next001() {
 
     else if (a == "4") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[3];
         message002.innerHTML = queFourOptions;
         message003.innerHTML = "";
@@ -374,8 +377,6 @@ function next001() {
 
     else if (a == "5") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[4];
         message002.innerHTML = queFiveOptions;
         message003.innerHTML = "";
@@ -385,8 +386,6 @@ function next001() {
 
     else if (a == "6") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[5];
         message002.innerHTML = queSixOptions;
         message003.innerHTML = "";
@@ -396,8 +395,6 @@ function next001() {
 
     else if (a == "7") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[6];
         message002.innerHTML = queSevenOptions;
         message003.innerHTML = "";
@@ -407,8 +404,6 @@ function next001() {
 
     else if (a == "8") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[7];
         message002.innerHTML = queEightOptions;
         message003.innerHTML = "";
@@ -418,8 +413,6 @@ function next001() {
 
     else if (a == "9") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[8];
         message002.innerHTML = queNineOptions;
         message003.innerHTML = "";
@@ -429,8 +422,6 @@ function next001() {
 
     else if (a == "10") {
         update = setInterval("timer001()", 1000);
-        c = 10;
-        time.innerHTML = 10;
         message001.innerHTML = questions[9];
         message002.innerHTML = queTenOptions;
         message003.innerHTML = "";
@@ -438,11 +429,14 @@ function next001() {
         message004.innerHTML = "";
     } else {
         window.clearInterval(update);
-        c = "-";
         message001.innerHTML = "End of Quiz";
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        document.getElementById('begone').style.display = "block";
+        document.getElementById('note').style.display = "none";
+        var score = b - 1;
+        keepScore(score);
     }
 }
 
@@ -450,7 +444,7 @@ function next001() {
 
 function timer001() {
     c = c - 1;
-    if (c < 10) {
+    if (c < 100) {
         time.innerHTML = c;
     }
 
@@ -460,6 +454,10 @@ function timer001() {
         message002.innerHTML = "";
         message003.innerHTML = "";
         message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+        document.getElementById('begone').style.display = "block";
+        document.getElementById('note').style.display = "none";
+        var score = b - 1;
+        keepScore(score);
     }
 }
 
@@ -469,24 +467,31 @@ function repeat001() {
     location.reload();
 }
 
-function save() {
-    var new_data = document.getElementById('inputInit').value + '\n';
+function keepScore (score) {
+
+    btnInsert.onclick = function () {
+        var key = inpKey.value;
+        var value = score;
     
-    if(localStorage.getItem('data') == null) {
-        localStorage.setItem('data', '[]');
-    }
+        if (key && value) {
+            localStorage.setItem(key, value);
+            location.reload();
+        }
+    }  
 
-    var old_data = JSON.parse(localStorage.getItem('data'));
-    old_data.push(new_data);
+    for (var i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
 
-    localStorage.setItem('data', JSON.stringify(old_data));
+        IsOutput.innerHTML += `<span style="font-weight: bold">${key}: ${value}</span><br />`;
+    }  
 }
 
-function view() {
-    if(localStorage.getItem('data') != null){
-        document.getElementById('output').innerHTML = JSON.parse(localStorage.getItem('data'));
-    } 
-}
+
+
+
+
+
 
 
 
